@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    background: #183153 ;
+    min-height: 100vh;
+}
+header h1{
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    color: white;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+#startSessionBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.705);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+  }
+  .manualbutton1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #ffd401;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.705);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+  }
+  #startSessionBtn:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+  }
+  .manualbutton1::after{
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #183153;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+  }
+  
+  #startSessionBtn:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+  .manualbutton1:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+  #startSessionBtn span,.manualbutton1 span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #startSessionBtn:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  .manualbutton1:hover span {
+    color: #ffd401;
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(0.95);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* task section */
+  .task_section{
+      max-width: 500px;
+      background: white;
+      padding: 20px;  
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin: auto;
+  }
+  .task_section h2{
+    color: #183153;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .task_input{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 20px;
+  }
+#activityDescription{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #183153;
+    font-size: 16px;
+    outline: none;
+}
+#stopTimerBtn,#startTimerBtn{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background:green;
+    cursor: pointer;
+}
+#cancelBtn{
+    grid-column: 1 / span 2;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background:rgb(207, 22, 22);
+    cursor: pointer;
+    margin-top: 10px;
+}
+#stopTimerBtn:hover{
+    opacity: 0.7;
+}
+/* sessionlogs */
+.sessionlogs{
+    max-width: 600px;
+    margin-top: 30px;
+    padding: 20px;
+    margin: auto;
+}
+.sessionlogs h2{
+    font-size: 2rem;
+    text-align: center;
+    color: #ffd401;
+    margin-bottom: 20px;
+}
+.sessionlogs ul{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgb(0, 0, 0.2);
+    background: white;
+    color: #183153;
+    margin-bottom: 20px;
+}
+.task_item{
+    border-bottom: 2px solid #183153;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+.task_heading{
+    font-size: 1.2rem;
+}
+.allbtn{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#summaryBtn{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background: rgb(207, 22, 22);
+    cursor: pointer;
+    padding: 8px 10px;
+}
+#addActivityBtn{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background: dodgerblue;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+#resetBtn{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background: orange;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+.manualbutton2{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background: green;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+/* manualmain */
+form h2{
+    color: #ffd401;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+form{
+    margin: auto;
+    padding: 20px 40px;
+    max-width: 500px;
+    background: white;
+    color: #183153;
+    border-radius: 5px;
+}
+form label{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+form button{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    background: #183153;
+    cursor: pointer;
+    padding: 8px 10px;
+    width: 100%;
+    opacity: 0.8;
+    font-weight: 700;
+}
+form button:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width:768px) {
+    .allbtn{
+        gap: 10px;
+    }
+    .allbtn button{
+        width: 100%;
+    }
+    .main{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:400px){
+    .task_input{
+        grid-template-columns: 1fr 1fr;
+    }
+    #activityDescription{
+        font-size: 12px;
+    }
+    #stopTimerBtn{
+        font-size: 12px;
+    }
+}
+/* dropdowns */
+
+  
+
+  
+  select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: auto;
+    display: block;
+    outline: none;
+    width: 320px;
+    padding: 10px;
+
+  }
+  
